@@ -1,0 +1,78 @@
+.lab-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  transition: box-shadow 0.15s ease;
+}
+
+.lab-card:hover { box-shadow: var(--shadow); }
+
+.lab-card--normal   { border-left: 3px solid var(--status-normal); }
+.lab-card--high     { border-left: 3px solid var(--status-high); }
+.lab-card--low      { border-left: 3px solid var(--status-low); }
+.lab-card--critical { border-left: 3px solid var(--status-critical); }
+
+.lab-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.lab-card__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.lab-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lab-card__badge--normal   { color: var(--status-normal);   background: var(--status-normal-bg); }
+.lab-card__badge--high     { color: var(--status-high);     background: var(--status-high-bg); }
+.lab-card__badge--low      { color: var(--status-low);      background: var(--status-low-bg); }
+.lab-card__badge--critical { color: var(--status-critical); background: var(--status-critical-bg); }
+
+.badge-symbol { font-size: 12px; }
+
+.lab-card__value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.lab-card__number {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.lab-card__unit {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.lab-card__explanation {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
