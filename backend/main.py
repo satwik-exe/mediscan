@@ -101,18 +101,3 @@ async def analyze_lab_report(file: UploadFile = File(...)):
         "flagged_count": len(flagged),
         "total_count": len(values),
     }
-```
-
----
-
-### All other files are fine
-
-`parser.py`, `reference_ranges.py`, and all frontend files don't use the API key — they don't need changes. Just make sure they only contain the code (no markdown text around it).
-
----
-
-## Step 3 — Create your `.env` file
-
-Inside `backend/`, create a new file called exactly `.env` (not `.env.example`) and put:
-```
-GEMINI_API_KEY=AIzaSyBh3nlb2AUkNqcyY6o8JhPhvKUucFodgKc
